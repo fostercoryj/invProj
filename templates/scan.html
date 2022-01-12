@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    table,td {
+        border:1px solid black;
+    }
+</style>
+    <head>
+
+    </head>
+    <body>
+        <h1>Barcode Capture</h1>
+        <p>{{ dTable }}</p>
+        <br>
+        <br>
+        <table style="width: 100%;">
+            <tr>
+                <td>Customer Name</td>
+                <td>{{ dTable[3] }}</td>
+            </tr>
+            <tr>
+                <td>Model</td>
+                <td>{{ dTable[4] }}</td>
+            </tr>
+            <tr>
+                <td>Packet</td>
+                <td>{{ packetNum }}</td>
+            </tr>
+            <tr>
+                <td>P/0</td>
+                <td>{{ dTable[5] }}</td>
+            </tr>
+            <tr>
+                <td>S/O</td>
+                <td>{{ dTable[6] }}</td>
+            </tr>
+            <tr>
+                <td>Lease/Purchase</td>
+                <td>{{ dTable[7] }}</td>
+            </tr>
+            <tr>
+                <td>Billing Address</td>
+                <td>{{ dTable[10] }}</td>
+            </tr>
+            <tr>
+                <td>Billing City</td>
+                <td>{{ dTable[11] }}</td>
+            </tr>
+            <tr>
+                <td>Billing State</td>
+                <td>{{ dTable[12] }}</td>
+            </tr>
+            <tr>
+                <td>Billing Zip</td>
+                <td>{{ dTable[13] }}</td>
+            </tr>
+            <tr>
+                <td>Contact Name</td>
+                <td>{{ dTable[14] }}</td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td>{{ dTable[16] }}</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>{{ dTable[17] }}</td>
+            </tr>
+        </table>
+        <p>Packet? {{ packetNum }}</p>
+        <p>B ADDR {{ dTable[10] }}</p>
+        <p>02: {{ dTable[2] }}</p>
+        <p>03: {{ dTable[3] }}</p>
+        <p>04: {{ dTable[4] }}</p>
+        <p>05: {{ dTable[5] }}</p>
+        <p>06: {{ dTable[6] }}</p>
+        <p>07: {{ dTable[7] }}</p>
+        <br>
+        <br>
+        <a href="/pdfTemplate">PDF</a>
+    </body>
+</html>
